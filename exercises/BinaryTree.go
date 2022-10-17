@@ -46,11 +46,35 @@ func (t *Tree) Search(k int) bool {
 	return false
 }
 
-func (t *Tree) Height() (h int) {
-	if t.leftBranch != nil || t.rightBranch != nil{
-		h +=
+func (t *Tree) InOrderTraversal() []int {
+	resArr := []int{}
+
+	if t.rightBranch != nil {
+		resArr = append(resArr, t.rightBranch.InOrderTraversal()...)
 	}
-	return
+	resArr = append(resArr, t.Key)
+	if t.leftBranch != nil {
+		resArr = append(resArr, t.leftBranch.InOrderTraversal()...)
+	}
+	return resArr
+
+}
+func (t *Tree) Height() (h int) {
+	if t == nil {
+		return 0
+	}
+	if t.leftBranch == nil && t.rightBranch == nil {
+		return 1
+	}
+
+	lHeight := t.leftBranch.Height()
+	rHeight := t.rightBranch.Height()
+
+	if lHeight >= rHeight {
+		return lHeight + 1
+	} else {
+		return rHeight + 1
+	}
 }
 
 func PrintTree(t *Tree) {
