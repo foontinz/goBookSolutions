@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"github.com/foontinz/xkcdTool/comicsUtils"
 	"log"
 	"text/template"
 )
@@ -11,7 +12,13 @@ Month : {{.Month}}
 Transcript : {{.Transcript}}`
 
 func main() {
-	var comic struct{}
+	comic := comicsUtils.Comic{
+		Num:        0,
+		Month:      "July",
+		Year:       "2005",
+		Transcript: "Something just snapped, something inside of me",
+	}
+
 	comicReport, err := template.New("comicReport").Parse(templ)
 	if err != nil {
 		log.Fatal(err)
