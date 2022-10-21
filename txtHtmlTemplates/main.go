@@ -8,7 +8,6 @@ import (
 
 const templ = `Num : {{.Num}}
 Month : {{.Month}}
-Year : {{.Year}}
 Transcript : {{.Transcript}}`
 
 func main() {
