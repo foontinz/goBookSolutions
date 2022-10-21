@@ -1,2 +1,2 @@
-module github.com/foontinz/goBookSolutions/binaryTree
+module github.com/foontinz/binaryTree
 go 1.19

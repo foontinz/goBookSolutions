@@ -1,4 +1,4 @@
-module github.com/foontinz/goBookSolutions/txtHtmlTemplates
+module github.com/foontinz/txtHtmlTemplates
 
 
 go 1.19

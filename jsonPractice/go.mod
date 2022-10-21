@@ -1,3 +1,3 @@
-module github.com/foontinz/goBookSolutions/jsonPractice
+module github.com/foontinz/jsonPractice
 
 go 1.19

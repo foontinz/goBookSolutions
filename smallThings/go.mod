@@ -1,3 +1,3 @@
-module github.com/foontinz/goBookSolutions/smallThings
+module github.com/foontinz/smallThings
 
 go 1.19
